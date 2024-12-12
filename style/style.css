@@ -1,0 +1,158 @@
+@charset "UTF-8";
+* {
+  padding: 0px;
+  margin: 0px;
+  box-sizing: border-box;
+  font-size: 18px;
+  font-family: "Outfit", sans-serif;
+}
+
+body {
+  width: 100%;
+  height: 100vh;
+  background-color: hsl(217, 54%, 11%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+main {
+  width: 300px;
+  height: 500px;
+  overflow: hidden;
+  border-radius: 10px;
+  background-color: hsl(216, 50%, 16%);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 54px 55px, rgba(0, 0, 0, 0.12) 0px -12px 30px, rgba(0, 0, 0, 0.12) 0px 4px 6px, rgba(0, 0, 0, 0.17) 0px 12px 13px, rgba(0, 0, 0, 0.09) 0px -3px 5px;
+}
+main .content {
+  width: 85%;
+  height: 92%;
+}
+
+header {
+  position: relative;
+  width: 100%;
+  height: 250px;
+  background-image: url("../images/image-equilibrium.jpg");
+  background-size: cover;
+  background-position: center;
+  cursor: pointer;
+  border-radius: 5px;
+  transition: background-color 0.3s ease, border-radius 0.3s ease; /* Smooth transition */
+}
+header:hover {
+  background-color: hsl(178, 100%, 50%); /* Change background color on hover */
+  border-radius: 5px; /* Change border-radius on hover */
+}
+header::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Optional overlay color */
+  transition: background-color 0.3s ease; /* Smooth transition */
+  z-index: 2; /* Ensure it’s above the header's background image */
+  opacity: 0; /* Initially hidden */
+  border-radius: 5px; /* Inherit border-radius from parent */
+}
+header:hover::before {
+  background-color: hsl(178, 100%, 50%); /* Change to your desired color */
+  opacity: 0.5; /* Show the overlay with some transparency */
+}
+header::after {
+  content: "";
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  top: 50%; /* Center the image vertically */
+  left: 50%; /* Center the image horizontally */
+  transform: translate(-50%, -50%); /* Ensure the image is perfectly centered */
+  background-image: url("../images/icon-view.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  background-position: center;
+  z-index: 3; /* Ensure the image is above everything else */
+  opacity: 0; /* Initially hidden */
+  transition: opacity 0.3s ease; /* Smooth transition */
+}
+header:hover::after {
+  opacity: 1; /* Show the image on hover */
+}
+
+.equilibrium-card .equilibrium-title {
+  color: hsl(0, 0%, 100%);
+  letter-spacing: 1px;
+  margin-top: 10px;
+  cursor: pointer;
+}
+.equilibrium-card .equilibrium-title:hover {
+  color: hsl(178, 100%, 50%);
+}
+.equilibrium-card .equilibrium-description {
+  font-size: 16px;
+  color: rgba(139.485, 171.9975, 217.515, 0.5);
+  margin-top: 15px;
+}
+.equilibrium-card .equilibrium-details {
+  margin-top: 15px;
+  display: flex;
+  justify-content: space-between;
+}
+.equilibrium-card .equilibrium-details .equilibrium-price img {
+  width: 10px;
+  height: 12px;
+  vertical-align: middle;
+}
+.equilibrium-card .equilibrium-details .equilibrium-price span {
+  color: hsl(178, 100%, 50%);
+  font-size: 14px;
+  font-weight: 500;
+  letter-spacing: 1px;
+}
+.equilibrium-card .equilibrium-details .equilibrium-time img {
+  width: 15px;
+  height: 15px;
+  vertical-align: middle;
+}
+.equilibrium-card .equilibrium-details .equilibrium-time span {
+  color: rgba(139.485, 171.9975, 217.515, 0.5);
+  font-size: 14px;
+}
+.equilibrium-card::after {
+  content: "";
+  display: block;
+  width: 100%;
+  height: 1px;
+  background-color: rgba(139.485, 171.9975, 217.515, 0.2);
+  margin-top: 20px; /* Adjust the space above the line as needed */
+}
+
+footer {
+  margin-top: 20px;
+}
+footer img {
+  width: 35px;
+  height: 35px;
+  vertical-align: middle;
+  border: 1px solid white;
+  border-radius: 100%;
+}
+footer samp {
+  margin-left: 10px;
+  font-size: 16px;
+  color: rgba(139.485, 171.9975, 217.515, 0.6);
+}
+footer samp span {
+  color: white;
+  cursor: pointer;
+}
+footer samp span:hover {
+  color: hsl(178, 100%, 50%);
+}
+
+/*# sourceMappingURL=style.css.map */
